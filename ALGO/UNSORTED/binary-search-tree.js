@@ -19,8 +19,8 @@ createNode = function createNode( num ) {
 };
 
 addSubNode = ( node, direct, num ) => {
-    if ( node[ direct ] === undefined ) {
-      node[ direct ] = createNode( num );
+  if ( node[ direct ] === undefined ) {
+    node[ direct ] = createNode( num );
   } else {
     node[ direct ].add( num );
   }
@@ -42,7 +42,7 @@ add = function ( num ) {
 };
 
 search = function ( num ) {
-    if ( num === this.value ) {
+  if ( num === this.value ) {
     return this;
   } else if ( num < this.value && this.left ) {
     return this.left.search( num );
@@ -54,7 +54,7 @@ search = function ( num ) {
 };
 
 findRightMost = node => {
-    if ( node.right === undefined ) {
+  if ( node.right === undefined ) {
     return node;
   }
   return findRightMost( node.right );
@@ -82,22 +82,21 @@ replaceNodeInParent = ( node, parent, newNode ) => {
 
 
 binaryTreeDelete = function ( num, parent ) {
-    let successor;
-    if ( num < this.value ) {
-      return this.left ? this.left.delete( num, this ) : root;
-    } else if ( num > this.value ) {
-      return this.right ? this.right.delete( num, this ) : root;
+  let successor;
+  if ( num < this.value ) {
+    return this.left ? this.left.delete( num, this ) : root;
+  } else if ( num > this.value ) {
+    return this.right ? this.right.delete( num, this ) : root;
   } else {
     // delete key here
     if ( this.left !== undefined && this.right !== undefined ) {
       successor = findRightMost( this.left );
       this.value = successor.value;
       this.left.delete( successor.value, this );
-      }
-      else if ( this.left ) {
-        replaceNodeInParent( this, parent, this.left );
-      } else if ( this.right ) {
-        replaceNodeInParent( this, parent, this.right );
+    } else if ( this.left ) {
+      replaceNodeInParent( this, parent, this.left );
+    } else if ( this.right ) {
+      replaceNodeInParent( this, parent, this.right );
     } else {
       replaceNodeInParent( this, parent ); // replace with undefined
     }
