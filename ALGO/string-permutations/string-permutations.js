@@ -14,7 +14,7 @@ module.exports = string => {
     for ( let i = 0; i < remaining.length; i++ ) {
       makeWord(
         word + remaining[ i ],
-          remaining.substr( 0, i ) + remaining.substr( i + 1 )
+        remaining.substr( 0, i ) + remaining.substr( i + 1 )
       );
     }
   } )( '', string );

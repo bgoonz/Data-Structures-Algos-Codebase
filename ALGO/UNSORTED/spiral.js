@@ -14,7 +14,7 @@ const generateGrid = ( width, height ) => {
 
 const spiralTraversal = ( grid, top, left ) => {
   const // This will be the length to traverse to
-  length = 1;
+    length = 1;
 
   const output = [];
   const UP = 0;
@@ -30,7 +30,7 @@ const spiralTraversal = ( grid, top, left ) => {
   maxLength = ( grid.length > grid[ 0 ].length ? grid.length : grid[ 0 ].length );
 
   pushNumber = ( y, x ) => {
-      top = y;
+    top = y;
     left = x;
     return grid[ top ] && grid[ top ][ left ] && output.push( grid[ top ][ left ] );
   };
@@ -78,5 +78,5 @@ const spiralTraversal = ( grid, top, left ) => {
 
 // Generate the traversed output
 export default ( h, w, r, c ) => {
-    return spiralTraversal( generateGrid( w, h ), r, c );
+  return spiralTraversal( generateGrid( w, h ), r, c );
 };

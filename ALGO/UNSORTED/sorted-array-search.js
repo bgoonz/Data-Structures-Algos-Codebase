@@ -1,6 +1,6 @@
 export default ( array, number ) => {
-    return ( function searchNumber( left, right ) {
-          const center = left + Math.floor( ( right - left ) / 2 );
+  return ( function searchNumber( left, right ) {
+    const center = left + Math.floor( ( right - left ) / 2 );
 
     // If the numbers match, return the center index.
     if ( array[ center ] === number ) {

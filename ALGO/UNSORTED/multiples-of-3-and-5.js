@@ -3,10 +3,10 @@ export default function sumOfMultiples( number, multiples ) {
   return Array( ...new Array( number ) ).map( ( _, index ) => {
     return index;
   } ).filter( number => {
-        return multiples.some( multiple => {
+    return multiples.some( multiple => {
       return number % multiple === 0;
     } );
-    } ).reduce( ( memo, number ) => {
+  } ).reduce( ( memo, number ) => {
     return memo + number;
   } );
 };

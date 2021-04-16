@@ -5,7 +5,7 @@ export function traversal( element, className ) {
   ( function traverse( node ) {
     // Loop through all the child nodes
     node.childNodes.forEach( currentNode => {
-          const currentClass = currentNode.className;
+      const currentClass = currentNode.className;
 
       // Check if the class name exists within the current nodes class
       // I believe I learnt of this technique from jQuery source code.
@@ -15,8 +15,8 @@ export function traversal( element, className ) {
 
       // If the current node have more child nodes, continue traversing.
       currentNode.childNodes && traverse( currentNode );
-      } );
-      } )( element );
+    } );
+  } )( element );
 
   return found;
 }

@@ -1,3 +1,3 @@
 export default string => {
-    return string.split( /\s+/g ).reverse().join( ' ' );
+  return string.split( /\s+/g ).reverse().join( ' ' );
 };

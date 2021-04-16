@@ -1,8 +1,8 @@
 export default number => {
-    const numberString = ( `${number}` );
-    let length = numberString.length - 1;
-    let string = '';
-    let sorter;
+  const numberString = ( `${number}` );
+  let length = numberString.length - 1;
+  let string = '';
+  let sorter;
 
   // Loop in reverse comparing all the digits to the one beside it.
   while ( length-- ) {

@@ -12,7 +12,7 @@ export function iterative( number ) {
   }
 
   return string.join( '.' );
-  }
+}
 
 export function regexp( number ) {
   const string = ( `${number}` ).split( '.' );
@@ -20,4 +20,4 @@ export function regexp( number ) {
   string[ 0 ] = string[ 0 ].replace( /(\d)(?=(?:\d{3})+(?:\.|$))/g, '$1,' );
 
   return string.join( '.' );
-  }
+}

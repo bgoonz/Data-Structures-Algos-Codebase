@@ -18,11 +18,11 @@ export default function mergeSort( array, compare ) {
   }
 
   const merge = ( left, right ) => {
-      const result = [];
-      while ( left.length || right.length ) {
-        if ( left.length && right.length ) {
-          if ( compare( left[ 0 ], right[ 0 ] ) < 1 ) {
-            result.push( left.shift() );
+    const result = [];
+    while ( left.length || right.length ) {
+      if ( left.length && right.length ) {
+        if ( compare( left[ 0 ], right[ 0 ] ) < 1 ) {
+          result.push( left.shift() );
         } else {
           result.push( right.shift() );
         }

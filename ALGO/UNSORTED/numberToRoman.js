@@ -28,7 +28,7 @@ function convertToRoman( num ) {
         // Shorten occurrences of 9 * 10^i
         .replace(
           romans[ i ][ 1 ] + romans[ i ][ 0 ].repeat( 4 ),
-            romans[ i ][ 0 ] + romans[ i + 1 ][ 0 ]
+          romans[ i ][ 0 ] + romans[ i + 1 ][ 0 ]
         )
         // Shorten occurrences of 4 * 10^i
         .replace( romans[ i ][ 0 ].repeat( 4 ), romans[ i ][ 0 ] + romans[ i ][ 1 ] );

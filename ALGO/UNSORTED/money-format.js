@@ -1,8 +1,8 @@
 export default value => {
-    const remaining = value - ~~value;
-    let string = `${~~value}`;
-    let length = string.length;
-    let places = 0;
+  const remaining = value - ~~value;
+  let string = `${~~value}`;
+  let length = string.length;
+  let places = 0;
 
   while ( --length ) {
     places += 1;
