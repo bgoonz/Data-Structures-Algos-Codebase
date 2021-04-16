@@ -1,5 +1,5 @@
 module.exports = function nextPalindrome( number ) {
-    const numberString = ( '' + number );
+  const numberString = ( '' + number );
   const numberLength = numberString.length;
   const oddDigits = numberLength & 1;
   const leftHalf = numberString.substr( 0, ~~( numberLength / 2 ) );

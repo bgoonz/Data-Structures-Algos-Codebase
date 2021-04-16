@@ -51,12 +51,12 @@ module.exports = list => {
 
     // Insert the word into the prefix tree.
     insertWord( word );
-    } );
+  } );
 
   possibleWords.forEach( possible => {
-        const word = possible[ 0 ];
-        const prefixes = possible[ 1 ];
-        let found = false;
+    const word = possible[ 0 ];
+    const prefixes = possible[ 1 ];
+    let found = false;
 
     const findCompoundWord = suffix => {
       // Find all future prefixes and continue search.
@@ -83,13 +83,13 @@ module.exports = list => {
     };
 
     var loopPrefixes = ( prefix, word ) => {
-        findCompoundWord( word.substr( prefix.length ) );
+      findCompoundWord( word.substr( prefix.length ) );
     };
 
     prefixes.forEach( prefix => {
-    loopPrefixes( prefix, word );
+      loopPrefixes( prefix, word );
     } );
-    } );
+  } );
 
   return longestWords;
 };

@@ -1,4 +1,4 @@
-export default (dictionary, start, end) => {
+export default ( dictionary, start, end ) => {
   // Create a function that will return an object which represents a graph
   // structure.
   const createGraph = dictionary => {
@@ -6,7 +6,7 @@ export default (dictionary, start, end) => {
 
     // Create a simple helper function that will return a boolean whether the
     // words are one character apart
-    const isOneCharDifference = (word1, word2) => {
+    const isOneCharDifference = ( word1, word2 ) => {
       // If the second word is larger than the first word, reverse the
       // arguments and run again.
       if ( word2.length > word1.length ) {
@@ -44,13 +44,13 @@ export default (dictionary, start, end) => {
       // Check all the other words in the graph so far and see if they are
       // connections.
       Object.keys( graph ).forEach( connection => {
-            if ( isOneCharDifference( word, connection ) ) {
-              graph[ word ].push( connection );
+        if ( isOneCharDifference( word, connection ) ) {
+          graph[ word ].push( connection );
           // Push the word into the connection if it's been created.
           graph[ connection ] && graph[ connection ].push( word );
         }
       } );
-      } );
+    } );
 
     return graph;
   };
@@ -80,9 +80,9 @@ export default (dictionary, start, end) => {
     }
 
     graph[ word ].forEach( connection => {
-    return findRoute( connection, route.slice() );
+      return findRoute( connection, route.slice() );
     } );
-    } )( start, [] );
+  } )( start, [] );
 
   return shortestRoute;
 };

@@ -1,5 +1,5 @@
 module.exports = function quickSort( array, compare ) {
-    const lesser = [];
+  const lesser = [];
   const greater = [];
   let pivot;
 

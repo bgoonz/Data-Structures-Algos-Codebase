@@ -6,7 +6,7 @@ const characters = {};
 const words = {};
 const wordsParagraph = {};
 
-const filterObject = (input, callback) => {
+const filterObject = ( input, callback ) => {
   const output = {};
 
   Object.keys( input ).forEach( value => {
@@ -17,28 +17,34 @@ const filterObject = (input, callback) => {
 };
 
 const sortByCount = object => {
-    return Object.keys( object ).map( input => {
+  return Object.keys( object ).map( input => {
     return {
       value: input,
       count: object[ input ]
     };
-  } ).sort( ({count}, {count}) => {
+  } ).sort( ( {
+    count
+  }, {
+    count
+  } ) => {
     // Sort descending
     return count - count;
-  } ).map( ({value}) => {
+  } ).map( ( {
+    value
+  } ) => {
     return value;
   } );
 };
 
 const isWordChar = char => {
-    const charCode = char.charCodeAt( 0 );
+  const charCode = char.charCodeAt( 0 );
   // Characters code not between A-Z
   return !( charCode < 65 || charCode > 90 );
 };
 
 // On each input data chunk, process it using the balance checker
 process.stdin.on( 'data', chunk => {
-      let word = '';
+  let word = '';
   let prevSymbol = '\n';
 
   for ( let i = 0; i < chunk.length; i++ ) {
@@ -64,24 +70,24 @@ process.stdin.on( 'data', chunk => {
 } );
 
 process.stdin.on( 'end', () => {
-      const sortedWords = sortByCount( words );
-      const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split( '' );
+  const sortedWords = sortByCount( words );
+  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split( '' );
 
-  const sortedLetters = sortByCount( filterObject( characters, (_, char) => {
+  const sortedLetters = sortByCount( filterObject( characters, ( _, char ) => {
     return isWordChar( char );
   } ) );
 
   const sortedWordsParagraph = sortByCount( wordsParagraph );
 
-  const totalWords = Object.keys( words ).reduce( (memo, word) => {
+  const totalWords = Object.keys( words ).reduce( ( memo, word ) => {
     return memo + words[ word ];
   }, 0 );
 
-  const totalLetters = Object.keys( characters ).reduce( (memo, char) => {
+  const totalLetters = Object.keys( characters ).reduce( ( memo, char ) => {
     return memo + ( isWordChar( char ) ? characters[ char ] : 0 );
   }, 0 );
 
-  const totalSymbols = Object.keys( characters ).reduce( (memo, char) => {
+  const totalSymbols = Object.keys( characters ).reduce( ( memo, char ) => {
     return memo + ( /[^\w\s]/.test( char ) ? characters[ char ] : 0 );
   }, 0 );
 
@@ -107,4 +113,4 @@ process.stdin.on( 'end', () => {
   );
   console.log( `Words only used once: ${onceWords.join( ', ' )}` );
   console.log( `Letters not used in the document: ${unusedLetters.join( ', ' )}` );
-  } );
+} );

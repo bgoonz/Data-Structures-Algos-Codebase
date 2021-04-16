@@ -6,9 +6,9 @@ module.exports = ( fn, times ) => {
 
   // Return the function that will be executed.
   return function ( ...args ) {
-      if ( !times ) {
-        return memo;
-      }
+    if ( !times ) {
+      return memo;
+    }
 
     // Set memo to the result of the function and decrement the number of
     // executions.

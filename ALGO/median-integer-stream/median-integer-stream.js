@@ -8,7 +8,7 @@ class LinkedList {
   }
 
   append( value ) {
-      const node = new LinkedList( value );
+    const node = new LinkedList( value );
     node.prev = this;
     node.next = this.next;
     // Fix the linked list node references.
@@ -18,7 +18,7 @@ class LinkedList {
   }
 
   prepend( value ) {
-      const node = new LinkedList( value );
+    const node = new LinkedList( value );
     node.prev = this.prev;
     node.next = this;
     // Fix the linked list node references.
@@ -31,8 +31,8 @@ class LinkedList {
 module.exports = () => {
   return {
     insert( number ) {
-        if ( !this._median ) {
-          this._median = new LinkedList( number );
+      if ( !this._median ) {
+        this._median = new LinkedList( number );
         return;
       }
 

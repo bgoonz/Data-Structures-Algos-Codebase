@@ -5,9 +5,9 @@ module.exports = ( array, compare ) => {
   }
 
   const swap = ( array, first, second ) => {
-      const temp = array[ first ];
-      array[ first ] = array[ second ];
-      array[ second ] = temp;
+    const temp = array[ first ];
+    array[ first ] = array[ second ];
+    array[ second ] = temp;
     return array;
   };
 
