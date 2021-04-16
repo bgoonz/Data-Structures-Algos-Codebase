@@ -1,5 +1,5 @@
 export default string => {
-    let length = 0;
+  let length = 0;
   // Store the list of longest words in an object to automatically filter
   // for duplicates.
   let hash = {};

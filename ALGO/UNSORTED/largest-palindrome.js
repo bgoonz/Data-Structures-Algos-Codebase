@@ -1,9 +1,10 @@
-cexport default str => {
-    const palindromes = [];
+cexport
+default str => {
+  const palindromes = [];
 
   const walkPalindrome = ( result, str, leftIndex, rightIndex ) => {
-      while ( str[ leftIndex - 1 ] === str[ rightIndex + 1 ] ) {
-        result = str[ leftIndex -= 1 ] + result + str[ rightIndex += 1 ];
+    while ( str[ leftIndex - 1 ] === str[ rightIndex + 1 ] ) {
+      result = str[ leftIndex -= 1 ] + result + str[ rightIndex += 1 ];
     }
     palindromes.push( result );
   };

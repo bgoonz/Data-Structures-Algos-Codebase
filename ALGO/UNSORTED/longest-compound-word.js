@@ -1,14 +1,14 @@
 export default list => {
-    const prefixes = {};
-    const possibleWords = [];
-    let longestWords = [];
-    let longestLength = 0;
+  const prefixes = {};
+  const possibleWords = [];
+  let longestWords = [];
+  let longestLength = 0;
 
   // Inserts a word into the prefix tree structure.
   const insertWord = word => {
-      let index = 0;
-      let active = prefixes;
-      let char;
+    let index = 0;
+    let active = prefixes;
+    let char;
 
     while ( char = word[ index++ ] ) {
       active = ( active[ char ] = active[ char ] || {} );
@@ -19,11 +19,11 @@ export default list => {
 
   // Finds the longest prefix we can make using the word.
   const findPrefixes = word => {
-      let prefix = '';
-      const found = [];
-      let index = 0;
-      let active = prefixes;
-      let char;
+    let prefix = '';
+    const found = [];
+    let index = 0;
+    let active = prefixes;
+    let char;
 
     while ( char = word[ index++ ] ) {
       if ( !active[ char ] ) {
@@ -41,7 +41,7 @@ export default list => {
 
   // Loop through each of words in the list, adding them to the prefixes tree
   list.forEach( word => {
-        let prefix;
+    let prefix;
 
     // If we can find a closest possible word, it may be possible to create a
     // compound word - but we won't be able to check until we reach the end.
@@ -51,12 +51,12 @@ export default list => {
 
     // Insert the word into the prefix tree.
     insertWord( word );
-    } );
+  } );
 
   possibleWords.forEach( possible => {
-        const word = possible[ 0 ];
-        const prefixes = possible[ 1 ];
-        let found = false;
+    const word = possible[ 0 ];
+    const prefixes = possible[ 1 ];
+    let found = false;
 
     const findCompoundWord = suffix => {
       // Find all future prefixes and continue search.
@@ -83,15 +83,15 @@ export default list => {
     };
 
     var loopPrefixes = ( {
-        length
-      }, word ) => {
-        findCompoundWord( word.substr( length ) );
+      length
+    }, word ) => {
+      findCompoundWord( word.substr( length ) );
     };
 
     prefixes.forEach( prefix => {
-    loopPrefixes( prefix, word );
+      loopPrefixes( prefix, word );
     } );
-    } );
+  } );
 
   return longestWords;
 };
