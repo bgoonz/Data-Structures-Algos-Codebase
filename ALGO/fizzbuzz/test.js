@@ -5,13 +5,13 @@ test( 'fizzBuzz function is defined', () => {
 } );
 
 test( 'Calling fizzbuzz with `5` prints out 5 statements', () => {
-      fizzBuzz( 5 );
+  fizzBuzz( 5 );
 
   expect( console.log.mock.calls.length ).toEqual( 5 );
-  } );
+} );
 
 test( 'Calling fizzbuzz with 15 prints out the correct values', () => {
-      fizzBuzz( 15 );
+  fizzBuzz( 15 );
 
   expect( console.log.mock.calls[ 0 ][ 0 ] ).toEqual( 1 );
   expect( console.log.mock.calls[ 1 ][ 0 ] ).toEqual( 2 );
@@ -28,7 +28,7 @@ test( 'Calling fizzbuzz with 15 prints out the correct values', () => {
   expect( console.log.mock.calls[ 12 ][ 0 ] ).toEqual( 13 );
   expect( console.log.mock.calls[ 13 ][ 0 ] ).toEqual( 14 );
   expect( console.log.mock.calls[ 14 ][ 0 ] ).toEqual( 'fizzbuzz' );
-  } );
+} );
 
 beforeEach( () => {
   jest.spyOn( console, 'log' ).mockImplementation( () => {} );

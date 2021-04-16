@@ -1,7 +1,7 @@
 module.exports = ( k, array ) => {
-    const hash = {},
+  const hash = {},
     pairs = [];
-// Loop through the array once, storing the results in an object for a
+  // Loop through the array once, storing the results in an object for a
   // time complexity of O(n) - the naive solution consists of two for loops
   // which results in a complexity of O(n^2)
   array.forEach( number => {

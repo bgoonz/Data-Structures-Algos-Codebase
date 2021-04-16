@@ -7,9 +7,9 @@ module.exports = ( k, array ) => {
   array.forEach( num => {
     hash[ num ] = hash[ num ] + 1 || 1;
   } );
-// Loop through each of the keys in the hash and keep track of the total count
-for ( const i in hash ) {
-  if ( hash.hasOwnProperty( i ) ) {
+  // Loop through each of the keys in the hash and keep track of the total count
+  for ( const i in hash ) {
+    if ( hash.hasOwnProperty( i ) ) {
       // Check if `k` is smaller or equal to the current count plus the current
       // hash index, but also greater than the previous count (this will mean it
       // is stored in this integer key)

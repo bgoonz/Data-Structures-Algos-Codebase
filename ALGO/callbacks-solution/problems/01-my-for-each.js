@@ -30,4 +30,3 @@ function myForEach( array, cb ) {
 
 
 mole.exports = myForEach;
-  

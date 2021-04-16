@@ -5,8 +5,8 @@
   const memory = [ 1, 1 ];
 
   Object.assign( self, {
-        factorial_naive,
-        factorial_recursive,
+    factorial_naive,
+    factorial_recursive,
     factorial_dp
   } );
 
@@ -14,7 +14,7 @@
 
   function test_factorial() {
     const tests = [
-        [ 10, 3628800 ],
+      [ 10, 3628800 ],
       [ 4, 24 ],
       [ 12, 479001600 ],
       [ 1, 1 ],
@@ -22,7 +22,7 @@
       [ 0, 1 ]
     ];
     console.log(
-        tests.map( ( [ a, r ] ) => factorial_naive( a ) == r ? `Naive passed ${ a } ${ r }` : `Naive failed ${ a } ${ r }` ).join( `\n` )
+      tests.map( ( [ a, r ] ) => factorial_naive( a ) == r ? `Naive passed ${ a } ${ r }` : `Naive failed ${ a } ${ r }` ).join( `\n` )
     );
     console.log(
       tests.map( ( [ a, r ] ) => factorial_recursive( a ) == r ? `Recursive passed ${ a } ${ r }` : `Recursive failed ${ a } ${ r }` ).join( `\n` )

@@ -1,15 +1,15 @@
 // Implementing recursive solution
 exports.recursive = function fibonacci( n ) {
-    if ( n in fibonacci ) {
-      return fibonacci[ n ];
-    }
+  if ( n in fibonacci ) {
+    return fibonacci[ n ];
+  }
   // Store the fibonacci values on the function itself
   return fibonacci[ n ] = ( n < 2 ) ? n : fibonacci( n - 1 ) + fibonacci( n - 2 );
 };
 
 // Implementing iterative solution
 exports.iterative = function fibonacci( n ) {
-    const results = [ 0, 1 ];
+  const results = [ 0, 1 ];
 
   if ( n > 2 ) {
     for ( let i = 2; i < n; i++ ) {

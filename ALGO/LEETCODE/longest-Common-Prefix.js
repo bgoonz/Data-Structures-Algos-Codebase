@@ -18,7 +18,7 @@ const longestCommonPrefix = strs => {
   }
 
   return strs.reduce( ( accm, next ) => {
-        const tmp = accm.split( '' );
+    const tmp = accm.split( '' );
     // This tmp variable remains constant throughout the program, which is the first string element of the array split by ''
     let result = '';
 
@@ -40,7 +40,7 @@ const longestCommonPrefixAlt = strs => {
       i++;
     }
     return prev.slice( 0, i );
-    } )
+  } )
 };
 
 

@@ -2,7 +2,7 @@ const assert = require( "assert" );
 const alternatingMap = require( "../problems/23-alternating-map.js" );
 
 describe( "alternatingMap", () => {
-      it( "", () => {
+  it( "", () => {
     const triple = n => {
       return 3 * n;
     };
@@ -30,5 +30,5 @@ describe( "alternatingMap", () => {
     );
     const expected2 = [ "HEY!", "..everyone..", "WHATS!", "..up??.." ];
     assert.deepEqual( actual2, expected2 );
-    } );
-    } );
+  } );
+} );

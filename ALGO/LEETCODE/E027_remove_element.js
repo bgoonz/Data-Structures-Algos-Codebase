@@ -35,8 +35,8 @@ E> Do this loops till the last element of the array
 */
 
 const removeElement = ( nums, val ) => {
-    let head = 0; // index of the first element of the array
-    let tail = nums.length - 1; // index of the last element of the array
+  let head = 0; // index of the first element of the array
+  let tail = nums.length - 1; // index of the last element of the array
 
   while ( head <= tail ) {
     // console.log("value of A[i] in next iteration for comparison " + nums[head]);
@@ -58,9 +58,9 @@ console.log( removeElement( [ 3, 2, 2, 3, 4, 5 ], 3 ) );
 
 //Alternative solution (but not implementing in-place algo)
 const removeElement_alt = ( nums, val ) => {
-    for ( let i = 0; i < nums.length; i++ ) {
-      if ( nums[ i ] === val ) {
-        nums.splice( i, 1 ); // Remember splice() mutates the original array. So on the next iteration, the value of nums.length will be reduced by 1
+  for ( let i = 0; i < nums.length; i++ ) {
+    if ( nums[ i ] === val ) {
+      nums.splice( i, 1 ); // Remember splice() mutates the original array. So on the next iteration, the value of nums.length will be reduced by 1
     }
   }
   return nums.length;
@@ -70,9 +70,9 @@ console.log( removeElement_alt( [ 3, 2, 2, 3, 4, 5 ], 3 ) );
 
 // SOLUTION - 3 - Same as above, just starting the loop from the end of the array
 removeElement_3 = ( nums, val ) => {
-    for ( let i = nums.length - 1; i >= 0; i-- ) {
-      if ( nums[ i ] === val ) {
-        nums.splice( i, 1 )
+  for ( let i = nums.length - 1; i >= 0; i-- ) {
+    if ( nums[ i ] === val ) {
+      nums.splice( i, 1 )
     }
   }
   return nums.length;
@@ -97,8 +97,8 @@ console.log( removeElements_4( [ 3, 2, 2, 3, 4, 5 ], 3 ) );
 
 // SOLUTION-5
 removeElements_5 = ( nums, val ) => {
-    while ( nums.indexOf( val ) !== -1 ) {
-      nums.splice( nums.indexOf( val ), 1 )
+  while ( nums.indexOf( val ) !== -1 ) {
+    nums.splice( nums.indexOf( val ), 1 )
   }
   return nums.length
 }

@@ -29,4 +29,5 @@ exports.iterativeReverse = number => {
 
   return result;
 };
-  function factorial_recursive( n ) {
+
+function factorial_recursive( n ) {

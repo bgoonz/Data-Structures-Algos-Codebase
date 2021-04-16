@@ -34,7 +34,7 @@ function findAllSelfDividingNum( left, right ) {
     }
   }
   return allSelfDiving;
-  }
+}
 // console.log(findAllSelfDividingNum(1, 10000));
 
 /*Alternative solution
@@ -69,7 +69,7 @@ function isSelfDivisingNum( num ) {
       if ( num % remainder ) will be true and so I will
     return false from my program.Means this number is NOT self - divising.*/
     if ( num % remainder ) return false;
-    }
+  }
   return true; // If all the above false conditionals withing the while loop are not satisfied, then return true
 }
 

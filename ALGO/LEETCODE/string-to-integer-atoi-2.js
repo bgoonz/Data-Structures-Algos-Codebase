@@ -32,9 +32,9 @@ myAtoi = str => {
   // For the above code, I could just use Regexp, like my other solution in my other file.
 
   // Now traverse through the given string argument and build the number string.
-for ( i; i < str.length; i++ ) {
+  for ( i; i < str.length; i++ ) {
 
-  if ( str[ i ].charCodeAt( 0 ) >= 48 && str[ i ].charCodeAt( 0 ) <= 57 ) {
+    if ( str[ i ].charCodeAt( 0 ) >= 48 && str[ i ].charCodeAt( 0 ) <= 57 ) {
       number += str[ i ]
     } else {
       if ( number === "" ) {
@@ -53,10 +53,9 @@ for ( i; i < str.length; i++ ) {
 
     if ( finalOutputNum > 2147483647 && numSign === '+' ) {
       return 2147483647
-      }
-      else if ( finalOutputNum > 2147483648 && numSign === '-' ) {
-        return -2147483648;
-      }
+    } else if ( finalOutputNum > 2147483648 && numSign === '-' ) {
+      return -2147483648;
+    }
   }
 
   return ( numSign === '-' ? ( -1 * finalOutputNum ) : finalOutputNum )

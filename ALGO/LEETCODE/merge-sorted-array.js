@@ -39,10 +39,10 @@ B) Explanation on why I am not running a separate while loop for m ( like for n)
 //***********************************************
 //Alternative Solution-1 - Almost similar to the above, slightly shorter.
 merge1 = ( nums1, m, nums2, n ) => {
-    while ( m > 0 || n > 0 ) {
-      if ( m > 0 && n > 0 ) {
-        if ( nums1[ m - 1 ] > nums2[ n - 1 ] ) {
-          nums1[ m + n - 1 ] = nums1[ --m ];
+  while ( m > 0 || n > 0 ) {
+    if ( m > 0 && n > 0 ) {
+      if ( nums1[ m - 1 ] > nums2[ n - 1 ] ) {
+        nums1[ m + n - 1 ] = nums1[ --m ];
       } else {
         nums1[ m + n - 1 ] = nums2[ --n ];
       }

@@ -82,7 +82,7 @@ But now, the the code for the mniddle row starts, as the condition ( i !==0 && i
 */
 
 const convert = ( s, numRows ) => {
-    const periodSize = ( numRows * 2 ) - 2;
+  const periodSize = ( numRows * 2 ) - 2;
   const len = s.length;
   let result = '';
   let i, j, secondJ;
