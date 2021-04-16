@@ -11,7 +11,7 @@ module.exports = ( fn, delay, execAsap ) => {
       execAsap && fn.apply( that, args );
 
       timeout = setTimeout( () => {
-            execAsap || fn.apply( that, args );
+        execAsap || fn.apply( that, args );
         // Remove the old timeout variable so the function can run again
         timeout = null;
       }, delay || 100 );

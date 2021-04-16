@@ -44,13 +44,13 @@ module.exports = ( dictionary, start, end ) => {
       // Check all the other words in the graph so far and see if they are
       // connections.
       Object.keys( graph ).forEach( connection => {
-            if ( isOneCharDifference( word, connection ) ) {
-              graph[ word ].push( connection );
+        if ( isOneCharDifference( word, connection ) ) {
+          graph[ word ].push( connection );
           // Push the word into the connection if it's been created.
           graph[ connection ] && graph[ connection ].push( word );
         }
       } );
-      } );
+    } );
 
     return graph;
   };
@@ -80,9 +80,9 @@ module.exports = ( dictionary, start, end ) => {
     }
 
     graph[ word ].forEach( connection => {
-    return findRoute( connection, route.slice() );
+      return findRoute( connection, route.slice() );
     } );
-    } )( start, [] );
+  } )( start, [] );
 
   return shortestRoute;
 };
