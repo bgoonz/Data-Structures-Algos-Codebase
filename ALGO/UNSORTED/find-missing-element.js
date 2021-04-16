@@ -35,4 +35,4 @@ export function sum( a, b ) {
   };
 
   return a.reduce( add ) - b.reduce( add );
-  }
+}

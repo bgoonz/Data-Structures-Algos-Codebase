@@ -1,5 +1,5 @@
-var fs = require('fs');
+git const fs = require( 'fs' );
 
-var file = fs.readFileSync(process.argv[2]).toString();
+const file = fs.readFileSync( process.argv[ 2 ] ).toString();
 
-console.log(file.split('\n').length - 1);
+console.log( file.split( '\n' ).length - 1 );

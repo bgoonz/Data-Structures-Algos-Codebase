@@ -1,4 +1,4 @@
-import pafy
+simport pafy
 url = "https://www.youtube.com/watch?v=OE7wUUpJw6I&list=PL2_aWCzGMAwLPEZrZIcNEq9ukGWPfLT4A"
 video = pafy.new(url)
 print(video.title)

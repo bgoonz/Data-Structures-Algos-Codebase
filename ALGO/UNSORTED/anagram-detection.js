@@ -4,7 +4,7 @@
  * @type {Object}
  */
 const primeMap = ( () => {
-      const map = {};
+  const map = {};
 
   const primes = [
     2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67,
@@ -35,9 +35,9 @@ const primeMap = ( () => {
  * @return {Number}
  */
 const hash = str => {
-    return str.split( '' ).reduce( ( memo, char ) => {
-      return memo * primeMap[ char ];
-    }, 1 );
+  return str.split( '' ).reduce( ( memo, char ) => {
+    return memo * primeMap[ char ];
+  }, 1 );
 };
 
 /**

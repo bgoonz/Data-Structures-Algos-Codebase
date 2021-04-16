@@ -14,7 +14,7 @@ export default ( k, array ) => {
 
     // If the hash value is not true, set the hash to "unused"
     !hash[ k - number ] && ( hash[ number ] = false );
-    } );
+  } );
 
   return pairs;
 };

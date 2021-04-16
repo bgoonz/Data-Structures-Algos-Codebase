@@ -1,5 +1,5 @@
 export default array => {
-    const hash = {};
+  const hash = {};
 
   // Loop though the array adding all the elements together in a hash
   array.forEach( num => {

@@ -16,7 +16,7 @@ export default ( fn, delay, execAsap ) => {
     }
 
     timeout = setTimeout( () => {
-          execAsap || fn.apply( that, args );
+      execAsap || fn.apply( that, args );
       timeout = null;
     }, delay || 100 );
   };

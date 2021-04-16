@@ -1,7 +1,7 @@
 export default totalRooms => {
-    const findDivisors = number => {
-        const divisors = [];
-        let iterator = number;
+  const findDivisors = number => {
+    const divisors = [];
+    let iterator = number;
 
     while ( iterator-- ) {
       if ( number % iterator === 0 ) {
@@ -15,10 +15,10 @@ export default totalRooms => {
   // Returns true or false based on whether the number is found in the sum of
   // array subsets.
   const isSubsetSum = ( number, array ) => {
-      let hasSubset = false;
+    let hasSubset = false;
 
     ( function findSubset( total, numbers ) {
-        !hasSubset && ( hasSubset = total === number );
+      !hasSubset && ( hasSubset = total === number );
 
       if ( hasSubset || total > number ) {
         return;
@@ -30,14 +30,14 @@ export default totalRooms => {
           numbers.slice( 0, index ).concat( numbers.slice( index + 1 ) )
         );
       } );
-      } )( 0, array );
+    } )( 0, array );
 
     return hasSubset;
   };
 
   // Need a simple helper method that returns the sum of an array.
   const sumArray = array => {
-      return array.reduce( ( memo, num ) => {
+    return array.reduce( ( memo, num ) => {
       return memo + num;
     }, 0 );
   };

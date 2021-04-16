@@ -1,7 +1,7 @@
 export default array => {
-    if ( !array || !array.length ) {
-      return;
-    }
+  if ( !array || !array.length ) {
+    return;
+  }
 
   let currentSum;
   let maximumSum;

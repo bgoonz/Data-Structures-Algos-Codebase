@@ -1,4 +1,4 @@
-#linked list creation
+scss#linked list creation
 #singly linked list 
 
 class Node:

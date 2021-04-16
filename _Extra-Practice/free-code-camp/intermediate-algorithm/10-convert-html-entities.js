@@ -1,14 +1,13 @@
-
-function convertHTML(str) {
-    str = str.replace(/\&/g, '&amp;');
-    str = str.replace(/\</g, '&lt;');
-    str = str.replace(/\>/g, '&gt;');
-    str = str.replace(/\"/g, '&quot;');
-    str = str.replace(/\'/g, '&apos;');
+function convertHTML( str ) {
+  str = str.replace( /\&/g, '&amp;' );
+  str = str.replace( /\</g, '&lt;' );
+  str = str.replace( /\>/g, '&gt;' );
+  str = str.replace( /\"/g, '&quot;' );
+  str = str.replace( /\'/g, '&apos;' );
   return str;
 }
 
-console.log(convertHTML("<>"));
+console.log( convertHTML( "<>" ) );
 
 /* The below is not my code but an elegant solution that I'd like to remember. Str.replace() taking a function:
 

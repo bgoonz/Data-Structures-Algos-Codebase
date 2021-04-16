@@ -2,14 +2,14 @@
 //Reference: 
 // http://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/
 export default bst => {
-    if ( !bst || bst.value == null ) {
+  if ( !bst || bst.value == null ) {
     return false;
   }
 
   let prev;
 
   return ( function isBst( root ) {
-        if ( !root ) {
+    if ( !root ) {
       return true;
     }
 

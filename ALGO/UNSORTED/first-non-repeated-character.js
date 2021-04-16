@@ -1,12 +1,12 @@
 export default string => {
-    let checkChar;
-    let prevCharacter;
+  let checkChar;
+  let prevCharacter;
 
   checkChar = ( () => {
-        let repeated = false;
+    let repeated = false;
 
     return char => {
-        if ( prevCharacter && char === prevCharacter ) {
+      if ( prevCharacter && char === prevCharacter ) {
         repeated = true;
       }
       if ( prevCharacter && char !== prevCharacter ) {

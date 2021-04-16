@@ -1,15 +1,15 @@
 // Implementing recursive solution
 exports.recursive = function fibonacci( n ) {
-    if ( n in fibonacci ) {
-      return fibonacci[ n ];
-    }
+  if ( n in fibonacci ) {
+    return fibonacci[ n ];
+  }
   // Store the fibonacci values on the function itself
   return fibonacci[ n ] = ( n < 2 ) ? n : fibonacci( n - 1 ) + fibonacci( n - 2 );
 };
 
 // Implementing iterative solution
 exports.iterative = function fibonacci( n ) {
-    const results = [ 0, 1 ];
+  const results = [ 0, 1 ];
 
   if ( n > 2 ) {
     for ( let i = 2; i < n; i++ ) {
@@ -28,7 +28,7 @@ export function matrix( n ) {
   ] ];
 
   const matrixMultiply = ( A, B ) => {
-      let C;
+    let C;
 
     if ( Array.isArray( B[ 0 ] ) ) {
       C = [
@@ -50,8 +50,8 @@ export function matrix( n ) {
 
   // Calculates fibonacci spiral transformation matrix
   const calcFibSpiral = n => {
-      let count = 1;
-      let T;
+    let count = 1;
+    let T;
 
     if ( n & 1 ) {
       T = [
@@ -80,11 +80,11 @@ export function matrix( n ) {
   };
 
   return matrixMultiply( calcFibSpiral( n - 2 ), [ 1, 1 ] )[ 1 ];
-  }
+}
 
 // Implements closed form solution.
 export var closedForm = ( phi => {
-      return n => {
-          return Math.floor( phi ** n / Math.sqrt( 5 ) + 0.5 );
+  return n => {
+    return Math.floor( phi ** n / Math.sqrt( 5 ) + 0.5 );
   };
 } )( ( 1 + Math.sqrt( 5 ) ) / 2 );

@@ -1,3 +1,4 @@
+
 const {
   expect
 } = require( 'chai' );
@@ -36,7 +37,7 @@ describe( 'radixSort', () => {
   it( 'Should return an empty array for input arrays of length 0', () => {
     input = [];
     expect( radixSort( input ) ).to.eql( [] );
-    } );
+  } );
 
   it( 'Should return the input array for input arrays of length 1', () => {
     input = [ 1 ];
@@ -55,10 +56,10 @@ describe( 'radixSort', () => {
   } );
 
   it( 'Should sort a large array of randomly generated integers numerically in ascending order', () => {
-        const max = 999999999; // Max integer
-        const length = 1000 // Length of input array
-        let number; // Each individual integer
-        let result; // Result after sorting
+    const max = 999999999; // Max integer
+    const length = 1000 // Length of input array
+    let number; // Each individual integer
+    let result; // Result after sorting
 
     for ( let i = 0; i < length; i++ ) {
       input.push( Math.floor( Math.random() * max ) );
@@ -79,8 +80,8 @@ describe( 'radixSort', () => {
   } );
 
   it( 'Should sort reverse-sorted arrays', () => {
-  input = [ 100, 66, 41, 23, 15, 10, 9, 5, 4, 0 ];
-  expected = [ 0, 4, 5, 9, 10, 15, 23, 41, 66, 100 ];
-  expect( radixSort( input ) ).to.eql( expected );
+    input = [ 100, 66, 41, 23, 15, 10, 9, 5, 4, 0 ];
+    expected = [ 0, 4, 5, 9, 10, 15, 23, 41, 66, 100 ];
+    expect( radixSort( input ) ).to.eql( expected );
   } );
-  } );
+} );

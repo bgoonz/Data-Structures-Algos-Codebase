@@ -1,6 +1,5 @@
-
-function slasher(arr, howMany) { 
-  return arr.slice(howMany);
+function slasher( arr, howMany ) {
+  return arr.slice( howMany );
 }
 
-console.log(slasher([1, 2, 3], 2));
+console.log( slasher( [ 1, 2, 3 ], 2 ) );

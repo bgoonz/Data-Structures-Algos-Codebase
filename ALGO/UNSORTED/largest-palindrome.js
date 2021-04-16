@@ -1,4 +1,4 @@
-export default str => {
+cexport default str => {
     const palindromes = [];
 
   const walkPalindrome = ( result, str, leftIndex, rightIndex ) => {
