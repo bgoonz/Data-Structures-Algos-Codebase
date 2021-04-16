@@ -32,7 +32,7 @@ export function inPlace( array ) {
 
 // Flatten array using es6 reduce method
 exports.es6 = function flatten( array ) {
-    return array.reduce( ( arr, val ) => {
-      return arr.concat( Array.isArray( val ) ? flatten( val ) : val );
-    }, [] );
+  return array.reduce( ( arr, val ) => {
+    return arr.concat( Array.isArray( val ) ? flatten( val ) : val );
+  }, [] );
 };
