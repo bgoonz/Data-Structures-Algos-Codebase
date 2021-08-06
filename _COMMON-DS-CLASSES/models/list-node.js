@@ -1,8 +1,8 @@
 class ListNode {
   constructor(data, next = null) {
-    this.data = data
-    this.next = next
+    this.data = data;
+    this.next = next;
   }
 }
 
-module.exports = ListNode
+module.exports = ListNode;

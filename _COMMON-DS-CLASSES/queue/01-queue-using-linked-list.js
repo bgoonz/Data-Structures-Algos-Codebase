@@ -2,47 +2,47 @@
  *
  * Bryan Guner
  * e: bryan.guner@gmail.com
- * w: 
+ * w:
  *
  */
-const QueueNode = require('../models/list-node')
+const QueueNode = require("../models/list-node");
 
 class Queue {
   constructor() {
-    this.front = null
-    this.tail = null
-    this.size = 0
+    this.front = null;
+    this.tail = null;
+    this.size = 0;
   }
 
   isEmpty() {
-    return this.size === 0
+    return this.size === 0;
   }
 
   enqueue(data) {
-    let node = new QueueNode(data)
+    let node = new QueueNode(data);
     if (this.isEmpty()) {
-      this.front = node
-      this.tail = node
+      this.front = node;
+      this.tail = node;
     } else {
-      this.tail.next = node
-      this.tail = node
+      this.tail.next = node;
+      this.tail = node;
     }
-    this.size += 1
+    this.size += 1;
   }
 
   dequeue() {
     if (this.front === null) {
-      return null
+      return null;
     }
-    let result = this.front.data
+    let result = this.front.data;
     if (this.front === this.tail) {
-      this.front = null
-      this.tail = null
+      this.front = null;
+      this.tail = null;
     } else {
-      this.front = this.front.next
+      this.front = this.front.next;
     }
-    this.size -= 1
-    return result
+    this.size -= 1;
+    return result;
   }
 }
 
@@ -58,4 +58,4 @@ class Queue {
 //   console.log(qq.dequeue())
 // }
 
-module.exports = Queue
+module.exports = Queue;

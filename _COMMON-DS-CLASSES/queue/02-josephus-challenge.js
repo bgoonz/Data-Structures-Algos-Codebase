@@ -2,7 +2,7 @@
  *
  * Bryan Guner
  * e: bryan.guner@gmail.com
- * w: 
+ * w:
  *
  */
 
@@ -12,28 +12,28 @@
 // [A, B, C, D, E, F] n = 3 returns B
 // [A, B, C, D, E, F] n = 4 returns F
 
-const Queue = require('./01-queue-using-linked-list')
+const Queue = require("./01-queue-using-linked-list");
 
 function josephusChallenge(choices, n) {
-  let qq = new Queue()
+  let qq = new Queue();
   for (const choice of choices) {
-    qq.enqueue(choice)
+    qq.enqueue(choice);
   }
-  qq.enqueue(qq.dequeue())
-  let count = 1
+  qq.enqueue(qq.dequeue());
+  let count = 1;
   while (qq.size > 1) {
-    const choice = qq.dequeue()
+    const choice = qq.dequeue();
     if (count % n !== 0) {
-      qq.enqueue(choice)
+      qq.enqueue(choice);
     } else {
-      console.log('Removed ->' + choice)
+      console.log("Removed ->" + choice);
     }
-    count += 1
+    count += 1;
   }
-  return qq.dequeue()
+  return qq.dequeue();
 }
 
-test('josephus Challenge', () => {
-  expect(josephusChallenge('ABCDEF',3)).toEqual('B')
-  expect(josephusChallenge('ABCDEF',4)).toEqual('F')
-})
+test("josephus Challenge", () => {
+  expect(josephusChallenge("ABCDEF", 3)).toEqual("B");
+  expect(josephusChallenge("ABCDEF", 4)).toEqual("F");
+});
