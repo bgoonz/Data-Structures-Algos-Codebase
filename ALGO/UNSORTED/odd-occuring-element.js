@@ -1,5 +1,5 @@
-export default array => {
-  return array.reduce( ( memo, number ) => {
+export default (array) => {
+  return array.reduce((memo, number) => {
     return memo ^ number;
-  }, 0 );
+  }, 0);
 };

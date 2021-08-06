@@ -1,6 +1,6 @@
 function dijkstras(graph, source) {
-	//find the minimum distance from source node to all other nodes in the graph
-	//also outputs the path to optimal distance (i.e. nodes to traverse)
+  //find the minimum distance from source node to all other nodes in the graph
+  //also outputs the path to optimal distance (i.e. nodes to traverse)
   let distance = {};
 
   for (let node in graph) {

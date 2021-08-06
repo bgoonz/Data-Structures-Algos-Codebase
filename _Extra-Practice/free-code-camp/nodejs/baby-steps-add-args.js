@@ -1,5 +1,5 @@
-const numbers = process.argv.slice( 2 );
+const numbers = process.argv.slice(2);
 
-const total = numbers.reduce( ( done, curr ) => Number( done ) + Number( curr ) );
+const total = numbers.reduce((done, curr) => Number(done) + Number(curr));
 
-console.log( total );
+console.log(total);

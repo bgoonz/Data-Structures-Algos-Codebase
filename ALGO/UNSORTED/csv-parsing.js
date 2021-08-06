@@ -1,8 +1,8 @@
 // Please note: This can be accomplished using `JSON.parse('[' + csv + ']')`
-export default csv => {
+export default (csv) => {
   let isNumber = false;
   let isInput = false;
-  let curr = '';
+  let curr = "";
   const stack = [];
   let i = 0;
   let char;
@@ -10,38 +10,38 @@ export default csv => {
 
   csv = csv.trim();
 
-  pushStack = input => {
-    isNumber && ( input = +input );
+  pushStack = (input) => {
+    isNumber && (input = +input);
     // Resets
-    curr = '';
+    curr = "";
     isInput = false;
     isNumber = false;
-    stack.push( input );
+    stack.push(input);
   };
 
-  while ( char = csv.charAt( i++ ) ) {
-    if ( char === '"' ) {
+  while ((char = csv.charAt(i++))) {
+    if (char === '"') {
       isInput = !curr;
-    } else if ( char === ',' ) {
-      if ( isInput && !isNumber ) {
+    } else if (char === ",") {
+      if (isInput && !isNumber) {
         curr += char;
       } else {
-        pushStack( curr );
+        pushStack(curr);
       }
-    } else if ( ( isNumber || !curr ) && !Number.isNaN( +char ) ) {
+    } else if ((isNumber || !curr) && !Number.isNaN(+char)) {
       curr += char;
       isInput = true;
       isNumber = true;
     } else {
-      if ( isNumber || !isInput ) {
-        throw new Error( 'Unexpected character' );
+      if (isNumber || !isInput) {
+        throw new Error("Unexpected character");
       }
       curr += char;
     }
   }
 
   // Push the trailing entry
-  pushStack( curr );
+  pushStack(curr);
 
   return stack;
 };

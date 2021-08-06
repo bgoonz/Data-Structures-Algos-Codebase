@@ -41,8 +41,8 @@ class Queue {
       this.back = node;
       this.length++;
     } else {
-			this.back.next = node;
-			this.back = node;
+      this.back.next = node;
+      this.back = node;
       this.length++;
     }
 

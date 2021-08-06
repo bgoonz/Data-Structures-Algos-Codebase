@@ -18,7 +18,8 @@ function minPathSum(grid) {
     dp[row][0] = grid[row][0] + dp[row - 1][0]; //edge case to handle first column
     for (let col = 1; col < cols; col++) {
       //minimum value of already calculated minPathSum of previous indices 1 row up or 1 col to left
-      dp[row][col] = grid[row][col] + Math.min(dp[row - 1][col], dp[row][col - 1]);
+      dp[row][col] =
+        grid[row][col] + Math.min(dp[row - 1][col], dp[row][col - 1]);
     }
   }
   return dp[rows - 1][cols - 1];

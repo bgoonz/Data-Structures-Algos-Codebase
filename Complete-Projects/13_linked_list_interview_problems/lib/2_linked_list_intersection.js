@@ -72,7 +72,7 @@ function linkedListIntersection(list1, list2) {
       smallerList = smallerList.next;
     }
   }
-    return null;
+  return null;
 }
 
 function getLength(list) {

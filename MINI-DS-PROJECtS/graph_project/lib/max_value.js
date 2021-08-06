@@ -1,16 +1,16 @@
 function maxValue(node, visited = new Set(), curMax = -Infinity) {
-	if (visited.has(node.val)) return curMax;
+  if (visited.has(node.val)) return curMax;
 
-	visited.add(node.val);
-	curMax = Math.max(curMax, node.val);
+  visited.add(node.val);
+  curMax = Math.max(curMax, node.val);
 
-	node.neighbors.forEach(neighbor => {
-		curMax = maxValue(neighbor, visited, curMax);
-	});
+  node.neighbors.forEach((neighbor) => {
+    curMax = maxValue(neighbor, visited, curMax);
+  });
 
-	return curMax;
+  return curMax;
 }
 
 module.exports = {
-	maxValue
+  maxValue,
 };

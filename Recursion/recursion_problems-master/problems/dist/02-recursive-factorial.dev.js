@@ -26,15 +26,14 @@ base case: num === 1
 recursive case: n > 1
 recursive step: fac(num)= num*factorial(num-1)
 */
-function factorial( num ) {
+function factorial(num) {
   //num is integer
-  if ( num === 1 ) {
+  if (num === 1) {
     return 1;
   }
 
-  return num * factorial( num - 1 );
+  return num * factorial(num - 1);
 }
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
-
 
 module.exports = factorial;
